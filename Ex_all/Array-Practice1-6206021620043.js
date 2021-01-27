@@ -5,7 +5,7 @@ str = "";
 
 function check_values(values1, values2){
     var str = "";
-    for (let index = 0 ; index < values1.length ; index++){
+    for (let index = 0 ; index < values1.length ; index++){ 
         if (typeof values1[index] == typeof values2[index]){
             str += "True ";
         }
