@@ -1,6 +1,6 @@
 function promiseTimeout(ms) {
     return new Promise((resolve, reject) => {
-        setTimeout(reject, ms);// resolve คือสำเร็จ reject คือไม่สำเร็จ
+        setTimeout(resolve, ms);// resolve คือสำเร็จ reject คือไม่สำเร็จ
     });
 }
 

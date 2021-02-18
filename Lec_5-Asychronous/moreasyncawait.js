@@ -1,7 +1,7 @@
 function who() {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve("🤡");
+            resolve("🤩");
         }, 200);
     });
 }
@@ -27,7 +27,7 @@ async function msg() {
     const b = await what();
     const c = await where();
 
-    console.log('${a} ${b} ${c}');
+    console.log(`${a} ${b} ${c}`);
 }
 console.log('We are looking for:');
 msg();
