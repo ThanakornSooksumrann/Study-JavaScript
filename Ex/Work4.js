@@ -1,4 +1,4 @@
-function totalVolume(){
+function totalVolume(){//ฟังก์ชั่นเวอร์ชั่นนี้มีปัญหาอย่าพึ่งใช้แค่ทดลองทำดู
     let length = totalVolume.arguments.length;
     sum = 0;
     mul = 1;
