@@ -1,12 +1,9 @@
-function totalVolume(){//ฟังก์ชั่นเวอร์ชั่นนี้มีปัญหาอย่าพึ่งใช้แค่ทดลองทำดู
-    let length = totalVolume.arguments.length;
-    sum = 0;
-    mul = 1;
-    array = [];
-    for(let i = 0;i < length;i++){
-        array = arguments[i];
-        for(let s = 0;s < array.length;s++){
-            mul *= array[s];
+function totalVolume(){
+    let sum = 0;
+    for(let i = 0;i < arguments.length;i++){
+        mul = 1;
+        for(let s = 0;s < arguments[i].length;s++){
+            mul *= arguments[i][s];
         }
         sum += mul;
     }
