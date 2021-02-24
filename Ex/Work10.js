@@ -37,7 +37,7 @@ function isValidIP(ip){
 
     //กันเมื่อในตำแหน่งมี 0 นำหน้าเลข IP เช่น 033.233.03.013 
     for(i = 0;i < number.length;i++){
-        if(number[i].length > 0){
+        if(number[i].length-1 > 0){
             if(number[i].charAt(0) == 0 && number[i].charAt(1) >= 0){
                 return false;
             }
@@ -48,11 +48,11 @@ function isValidIP(ip){
     return true;
 }
 
-/*console.log (isValidIP("1.2.3.4"));//true
+console.log (isValidIP("1.2.3.4"));//true
 console.log (isValidIP("1.2.3"));//false
-console.log (isValidIP("1.2.3.4.5"));//false*/
+console.log (isValidIP("1.2.3.4.5"));//false
 console.log (isValidIP("123.45.67.89"));//true
-//console.log (isValidIP("1.2.3.0"));//false
+console.log (isValidIP("1.2.3.0"));//false
 console.log (isValidIP("1.2.0.4"));//true
 console.log (isValidIP("1.2.035.095"));//false
 console.log (isValidIP("100.200.300.400"));//false
