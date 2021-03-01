@@ -25,3 +25,13 @@
  t = [12, 55, 18, 130, 44].every(isBigฎEnough);
  console.table(f);
  console.table(t);
+
+ //Fill ใช้เปลี่ยนแปลงค่าในอาเรย์
+ //Ex1 แปลงทุกค่า
+ let animal = ["elephant", "tiger", "cat", "dog"];
+ animal.fill("dolphin");
+console.table(animal);
+ //Ex2 มีจุดเริ่มต้น
+ animal = ["elephant", "tiger", "cat", "dog"];
+ animal.fill("dolphin",1);
+ console.table(animal);
