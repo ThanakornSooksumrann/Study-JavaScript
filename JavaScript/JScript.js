@@ -35,3 +35,32 @@ console.table(animal);
  animal = ["elephant", "tiger", "cat", "dog"];
  animal.fill("dolphin",1);
  console.table(animal);
+//Ex3 มีจุดสิ้นสุด
+animal = ["elephant", "tiger", "cat", "dog"];
+animal.fill("dolphin",1,2);
+console.table(animal);
+
+//filter ใช้สร้างอาเรย์จากค่าที่ผ่านเงื่อนไข
+let ages = [32, 33, 16, 40];
+
+function checkAge(age){
+    return age <= 18;
+}
+fi = ages.filter(checkAge)
+console.table(fi);
+
+//find ใช้สำหรับค้นหาข้อมูลในอาเรย์โดยใช้เงื่อนไขเป็นฟังก์ชัน
+ages = [32, 33, 16, 40];
+
+function checkAge2(age){
+    return age >= 18;
+}
+console.log (ages.find(checkAge2));
+
+//findIndex ใช้สำหรับค้นหาข้อมูลในอาเรย์โดยใช้เงื่อนไขเป็นฟังก์ชัน โดยจะส่งเป็นลำดับของค่าที่ตรงกลับมาแทน
+ages = [32, 33, 16, 40];
+
+function checkAge3(age){
+    return age >= 18;
+}
+console.table(ages.findIndex(checkAge3));
