@@ -21,4 +21,5 @@
  function isBigฎEnough(element, index, array) {
      return element >= 10;
  }
- [12, 5, ]
+ [12, 5, 8, 130, 44].every(isBigฎEnough);
+ [12, 55, 18, 130, 44].every(isBigฎEnough);
