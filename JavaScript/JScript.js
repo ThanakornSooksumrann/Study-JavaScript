@@ -55,12 +55,25 @@ ages = [32, 33, 16, 40];
 function checkAge2(age){
     return age >= 18;
 }
-console.log (ages.find(checkAge2));
+console.table (ages.find(checkAge2));
 
-//findIndex ใช้สำหรับค้นหาข้อมูลในอาเรย์โดยใช้เงื่อนไขเป็นฟังก์ชัน โดยจะส่งเป็นลำดับของค่าที่ตรงกลับมาแทน
+//findIndex ใช้สำหรับค้นหาข้อมูลในอาเรย์โดยใช้เงื่อนไขเป็นฟังก์ชัน โดยจะส่งเป็นลำดับของค่าที่ตรงกลับมาแทน จะส่งตำแหน่งแรกที่มันเจอ 
 ages = [32, 33, 16, 40];
 
 function checkAge3(age){
     return age >= 18;
 }
 console.table(ages.findIndex(checkAge3));
+
+/*//forEach ใช้สำหรับเรียกใช้ฟังก์ชันเพื่อส่งค่าเป็นสมาชิกในอาเรย์ในครั้งเดียว โดยฟังก์ชัน callback ที่จะใช้งานร่วมนั้นต้องมีรูปแบบดังนี้
+//Function callback (value, index, array) value:ค่าของอาเรย์ index:ลำดับของสมาชิกในอาเรย์ array:ค่าที่ต้องการเสริมเข้าไป
+let sum = 0;
+let numbers = [34, 232, 55, 232, 285];
+
+function formular(item) {
+    sum += item;
+    return sum;
+}
+console.table(numbers.forEach(formular));*///ใช้กับ HTML ยังไม่ต้องสนใจ!!!!!
+
+//From สร้างอาเรย์โดยรับค่าอา
