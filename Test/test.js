@@ -1,31 +1,14 @@
-function isValidIP(str) {
-    test = str.split(".");
-    if (test.length == 4) {
-      for (i = 0; i < test.length; i++) {
-        if (test[i] < 1 || test[i] > 255) return false;
-  
-        for (a = 0; a < test[i].length; a++) {
-          if (test[i].charAt(a) == " ") return false;
-        }
-        
-        if (test[i].charAt(0) == 0) return false;
-  
-        if (isNaN(test[i])) return false;
-  
-        if (i == 3) {
-          for (a = 0; a < test[i].length; a++) {
-            if (test[i].charAt(a) == 0) return false;
-          }
-        }
+function findAllDigits(nums) {
+  let found = new Set();
+  for (let n of nums){
+    for (let i of ''+n){
+      if(found.add(i).size === 10){
+        return n;
       }
-      return true;
-    }else{
-        return false
     }
+  }
+  return "Mising digit!";
 }
 
-console.log (isValidIP("123.45.67.89"));//true
-//console.log (isValidIP("1.2.3.0"));//false
-console.log (isValidIP("1.2.0.4"));//true
-console.log (isValidIP("1.2.035.095"));//false
-console.log (isValidIP("100.200.300.400"));//false
+console.log (findAllDigits([5175, 4538, 2926, 5057, 6401, 4376, 2280, 6137, 8798, 9083]));
+console.log (findAllDigits([4883, 3876, 7769, 9846, 9546, 9634, 9696, 2832, 6822, 6868]));
